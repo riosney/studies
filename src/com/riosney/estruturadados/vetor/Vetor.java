@@ -1,7 +1,5 @@
 package com.riosney.estruturadados.vetor;
 
-import java.util.Arrays;
-
 public class Vetor {
 
 	private String[] elementos;
@@ -38,6 +36,14 @@ public class Vetor {
 			return true;
 		}
 		return false;
+	}
+	
+	public String busca(int posicao) {
+		if(!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+		}
+		
+		return this.elementos[posicao];
 	}
 	
 	public int tamanho() {
