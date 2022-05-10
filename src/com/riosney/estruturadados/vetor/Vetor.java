@@ -89,6 +89,15 @@ public class Vetor {
 		return -1;
 	}
 	
+	public void remove(int posicao) {
+		verificaPosicaoValida(posicao);
+		
+		for(int i=posicao; i<this.tamanho-1; i++) {
+			this.elementos[i] = this.elementos[i+1];
+		}
+		this.tamanho--;
+	}
+	
 	public int tamanho() {
 		return this.tamanho;
 	}
