@@ -19,6 +19,10 @@ public class Class07 {
 		vetor.adiciona(0, "A");
 		
 		System.out.println(vetor);
+		
+		vetor.adiciona(3, "D");
+		
+		System.out.println(vetor);
 	}
 
 }

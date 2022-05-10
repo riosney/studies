@@ -50,7 +50,7 @@ public class Vetor {
 		this.elementos[posicao] = elemento;
 		this.tamanho++;
 		
-		return false;
+		return true;
 	}
 	
 	public String busca(int posicao) {
