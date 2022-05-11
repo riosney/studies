@@ -2,7 +2,7 @@ package com.riosney.estruturadados.vetor.labs;
 
 import com.riosney.estruturadados.vetor.Lista;
 
-public class Class13 {
+public class Exer01 {
 
 	public static void main(String[] args) {
 
