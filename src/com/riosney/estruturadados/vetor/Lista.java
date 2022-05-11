@@ -101,6 +101,20 @@ public class Lista<T> {
 		}
 	}
 	
+	public void limpar() {
+		//opção 01
+		//this.elementos = (T[]) new Object[this.elementos.length];
+		
+		//opção 02
+		//this.tamanho = 0;
+		
+		//opção 03
+		for(int i=0; i<this.tamanho; i++) {
+			this.elementos[i] = null;
+		}
+		this.tamanho = 0;
+	}
+	
 	public int tamanho() {
 		return this.tamanho;
 	}
