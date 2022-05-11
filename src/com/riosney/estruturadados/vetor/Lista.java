@@ -55,17 +55,11 @@ public class Lista<T> {
 		}
 	}
 	
-	public Object busca(int posicao) {
+	public T busca(int posicao) {
 		
 		verificaPosicaoValida(posicao);
 		
 		return this.elementos[posicao];
-	}
-	
-	public void verificaPosicaoValida(int posicao) {
-		if(!(posicao >= 0 && posicao < tamanho)) {
-			throw new IllegalArgumentException("Posição inválida");
-		}
 	}
 	
 	public int busca(T elemento) {
@@ -129,6 +123,12 @@ public class Lista<T> {
 		s.append("]");
 		
 		return s.toString();
+	}
+	
+	public void verificaPosicaoValida(int posicao) {
+		if(!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+		}
 	}
 	
 }
