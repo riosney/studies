@@ -55,6 +55,10 @@ public class Lista<T> {
 		}
 	}
 	
+	public T obtem(int posicao) {
+		return this.busca(posicao);
+	}
+	
 	public T busca(int posicao) {
 		
 		verificaPosicaoValida(posicao);
