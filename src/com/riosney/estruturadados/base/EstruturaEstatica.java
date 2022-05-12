@@ -1,16 +1,16 @@
 package com.riosney.estruturadados.base;
 
-public class EstruturaRstatica<T> {
+public class EstruturaEstatica<T> {
 	
-	private T[] elementos;
-	private int tamanho;
+	protected T[] elementos;
+	protected int tamanho;
 	
-	public EstruturaRstatica(int capacidade) {
+	public EstruturaEstatica(int capacidade) {
 		this.elementos = (T[]) new Object[capacidade];
 		this.tamanho = 0;
 	}
 	
-	public EstruturaRstatica() {
+	public EstruturaEstatica() {
 		this(10);
 	}
 	

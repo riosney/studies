@@ -1,8 +1,8 @@
 package com.riosney.estruturadados.vetor;
 
-import com.riosney.estruturadados.base.EstruturaRstatica;
+import com.riosney.estruturadados.base.EstruturaEstatica;
 
-public class Lista02<T> extends EstruturaRstatica<T> {
+public class Lista02<T> extends EstruturaEstatica<T> {
 
 	public Lista02() {
 		super();
