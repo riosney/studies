@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MainApp {
 
 	public static void main(String[] args) {
+		/*
 		Scanner teclado = new Scanner(System.in);
 		int vetor[] = new int[Integer.parseInt(args[0])];
 		
@@ -14,6 +15,10 @@ public class MainApp {
 		
 		AlgoritmoOrdenacao alg = new AlgoritmoOrdenacao();
 		alg.setVetor(vetor);		
+		alg.bubbleSort();	
+		alg.mostraVetor(); */
+		
+		AlgoritmoOrdenacao alg = new AlgoritmoOrdenacao();		
 		alg.bubbleSort();	
 		alg.mostraVetor();
 	}
