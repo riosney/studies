@@ -1,0 +1,34 @@
+package com.riosney.estruturadados.pesquisas.ordenacao.bubbleSort;
+
+public class GeradorDeValores {
+
+	static int vetor[];
+	
+	public static boolean pertence(int valor, int tam) {
+		for(int i=0; i<tam; i++) {
+			if(vetor[i] == valor) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static void main(String[] args) {		
+		vetor = new int[7];
+		
+		int valor = 0, pos;
+		
+		for(pos = 0; pos < vetor.length; pos++) {
+			do {
+				vetor[pos] = (int)(Math.random()*100000) % 100000;
+			}while(pertence(valor, pos));
+			System.out.println("Valor gerado = "+valor);
+			vetor[pos] = valor;
+		}
+		
+		for(pos = 0; pos < vetor.length; pos++) {
+			System.out.println(vetor[pos]);			
+		}
+	}
+
+}
