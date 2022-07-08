@@ -49,6 +49,19 @@ public class AlgoritmoOrdenacao {
 		}
 	}
 	
+	public void insertionSort() {
+		int carta, it, j;
+		for(it = 1; it < vetor.length; it++) {
+			carta = vetor[it];
+			for(j = it-1; (j>=0) && vetor[j] > carta; j--) {
+				vetor[j+1] = vetor[j];
+			}
+			vetor[j+1] = carta;
+			System.out.println("----Iteração "+it);
+			mostraVetor();
+		}
+	}
+	
 	public void mostraVetor() {
 		for(int i=0; i<vetor.length; i++) {
 			System.out.print(vetor[i]+ " ");
