@@ -19,7 +19,8 @@ public class MainApp {
 		//alg.setVetor(vetor);		
 		//alg.bubbleSort();	
 		//alg.selectionSort();
-		alg.insertionSort();
+		//alg.insertionSort();
+		alg.quickSort(0, alg.getVetor().length-1);
 		alg.mostraVetor();
 		
 		/* bubblesort

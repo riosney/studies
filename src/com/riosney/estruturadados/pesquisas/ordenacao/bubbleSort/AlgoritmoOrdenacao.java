@@ -4,6 +4,10 @@ public class AlgoritmoOrdenacao {
 
 	private int vetor[] = {25, 57, 48, 37, 12, 92, 33};
 	
+	public int[] getVetor() {
+		return vetor;
+	}
+	
 	public void setVetor(int vetor[]) {
 		this.vetor = vetor;
 	}
@@ -61,6 +65,44 @@ public class AlgoritmoOrdenacao {
 			mostraVetor();
 		}
 	}
+	
+	public int partition(int inicio, int fim) {
+		int ref, up, down, temp;
+		
+		ref = vetor[inicio];
+		down = inicio;
+		up = fim;
+		
+		while(down < up) {
+			while(vetor[down] <= ref && down < fim) {
+				down++;
+			}
+			
+			while(vetor[up] > ref) {
+				up--;
+			}
+			
+			if(down < up) {
+				temp = vetor[down];
+				vetor[down] = vetor[up];
+				vetor[up] = temp;
+			}
+		}
+		vetor[inicio] = vetor[up];
+		vetor[up] = ref;
+		
+		return up;
+	}
+	
+	public void quickSort(int inicio, int fim){
+        int pivo;
+        if (inicio > fim){
+            return;
+        }
+        pivo = partition(inicio, fim);
+        quickSort(inicio, pivo-1);
+        quickSort(pivo+1, fim);
+    }
 	
 	public void mostraVetor() {
 		for(int i=0; i<vetor.length; i++) {
